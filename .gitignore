@@ -1,0 +1,27 @@
+# Maven build
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Bytecode
+*.class
+
+# IDE metadata
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS cruft
+.DS_Store
+Thumbs.db

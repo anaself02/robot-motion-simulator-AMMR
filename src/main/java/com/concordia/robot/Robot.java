@@ -97,6 +97,17 @@ public class Robot {
         System.out.printf("Position: %d, %d - Pen: %s - Facing: %s%n", 
                          x, y, penStatus, direction);
     }
+
+    // Turn 90° to the right (clockwise)
+    public void turnRight() {
+        this.direction = this.direction.turnRight();
+    }
+
+    // Turn 90° to the left (counter‑clockwise)
+    public void turnLeft() {
+        this.direction = this.direction.turnLeft();
+    }
+
     
     // Reset robot to initial state
     public void reset() {
