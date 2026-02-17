@@ -28,6 +28,7 @@ public class Robot {
     // Lower the pen
     public void penDown() {
         this.penDown = true;
+        floor.mark(x, y);
     }
 
     // check if pen is down, return true if pen is down, false otherwise
