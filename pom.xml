@@ -85,6 +85,36 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
+
+                     <!-- Enforce minimum coverage thresholds as release gate -->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <limits>
+                                        <!-- Statement Coverage: minimum 65% of instructions must be covered -->
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.65</minimum>
+                                        </limit>
+                                        <!-- Path/Branch Coverage: minimum 60% of branches must be covered -->
+                                        <limit>
+                                            <counter>BRANCH</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.60</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+
                 </executions>
             </plugin>
         </plugins>
